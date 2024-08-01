@@ -1,20 +1,37 @@
-// primitive type aliases
-type wasay = number; 
-let b : wasay
-b =12;
+// in interface 
+interface Human{
+    name:string;
+}
 
-// object type aliases
-type User = {
+interface Human{
+    age:number;
+}
+// so both things are merge together in memory
+function abcd(human:Human){
+    human.name.concat()
+    human.age.toExponential(2)
+}
+// so basically all these are merge 
+// next thing is extend
+
+interface Food {
     name:string,
-    email:string,
+    price:number
 }
-const user:User ={
-    name:'wasay',
-    email:'sas',
+interface MethaaFood extends Food {
+verySweet:boolean
 }
-
-type age = string | number 
-
-let AgeOfMe :age = 12;
-
-// so boolean will not be accepted or any other type this is type aliases
+interface khattaFood extends Food {
+    verySour:boolean
+    }
+function getMethaFood(mithai:MethaaFood){
+    mithai.name
+    mithai.price
+    mithai.verySweet
+}
+function getKhattaFood(khattai:khattaFood){
+  khattai.name
+  khattai.price
+  khattai.verySour
+}
+// so basically methafood has one and other it get from food which is being extended
